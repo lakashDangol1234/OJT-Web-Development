@@ -1,0 +1,3 @@
+downloaded bootstrap and link css and js
+Grid System
+-> row and col
