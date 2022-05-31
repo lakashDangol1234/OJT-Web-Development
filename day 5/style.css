@@ -1,0 +1,27 @@
+.footer{
+    height:34px;
+    line-height: 34px;
+}
+
+.border-1{
+    border:1px solid;
+}
+.border-2{
+    border:1px solid;
+}
+.border-3{
+    border:1px solid;
+}
+
+.border-primary{
+    border-color: blue;
+}
+
+.border-dark{
+    border-color:black;
+}
+
+.articles div{
+    border:2px solid black;
+    border-radius: 5px;
+}
