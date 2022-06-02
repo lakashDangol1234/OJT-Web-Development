@@ -1,0 +1,4 @@
+thumbnail
+rounded-circle
+w-100
+img-fluid
