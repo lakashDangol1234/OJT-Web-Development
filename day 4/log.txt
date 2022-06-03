@@ -1,0 +1,5 @@
+Learned about break points in col
+
+some classes like bg-{color} and text-{color}
+
+created responsive designs for different devices using break point

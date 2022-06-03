@@ -1,0 +1,3 @@
+HTML revision
+Information about code/text editor .
+Shortcut keys of the editor.

@@ -1,0 +1,2 @@
+slider
+importing font from google
