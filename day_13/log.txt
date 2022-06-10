@@ -1,0 +1,2 @@
+displaying students data from MYSQL database to the web page through php
+Adding edit and delete button to the each record
