@@ -1,0 +1,2 @@
+Handle delete of data
+Perform deletion of record from PHP code

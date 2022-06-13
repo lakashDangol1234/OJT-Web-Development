@@ -7,7 +7,7 @@ include "connection/dbconn.php";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Day 12</title>
+    <title>Day 13 / 14</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
@@ -41,7 +41,7 @@ include "connection/dbconn.php";
                         <td>' . $student->address . '</td>
                         <td>' . $student->contact . '</td>
                         <td><button class="btn btn-primary" id=' . $student->sid . '> <a class="text-decoration-none text-light" href="./partials/_handleEdit.php?id=' . $student->sid . '">Edit</a></button>
-                        <button class="btn btn-danger" id=' . $student->sid . '>
+                        <button onclick="return confirm(`Do you want to delete the record ?`)" class="btn btn-danger" id=' . $student->sid . '>
                         <a class="text-decoration-none text-light" href="./partials/_handleDelete.php?id=' . $student->sid . '">Delete</a></button></td>
                         </tr>';
                 }
