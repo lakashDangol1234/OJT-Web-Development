@@ -11,5 +11,5 @@ $stmt->bindparam(':id',$sid);
 $stmt->execute();
 
 
-header('location:http://localhost/lakashojt/day_13_14/index.php');
+header('location:http://localhost/lakashojt/day_13_14_15/index.php');
 ?>

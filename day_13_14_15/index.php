@@ -13,7 +13,7 @@ include "connection/dbconn.php";
 
 <body>
 
-
+    <?php include "partials/_header.php"; ?>
 
     <div class="container my-5">
         <table class="table table-striped">
@@ -34,6 +34,9 @@ include "connection/dbconn.php";
 
                 $result = $stmt->fetchAll(PDO::FETCH_OBJ);
 
+
+
+                // Displaying record from the database 
                 foreach ($result as $student) {
                     echo  '<tr>
                         <th scope="row">' . $student->sid . '</th>
@@ -56,6 +59,10 @@ include "connection/dbconn.php";
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('home').classList.add('active');
+    </script>
 </body>
 
 </html>

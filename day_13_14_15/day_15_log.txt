@@ -1,0 +1,1 @@
+Insert record to the database
