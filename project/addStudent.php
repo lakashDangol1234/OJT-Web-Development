@@ -1,16 +1,15 @@
 <?php
 include "connection/dbconn.php";
-$inserted=false;
-if(isset($_POST['save'])){
-    $name=$_POST['name'];
-    $address=$_POST['address'];
-    $contact=$_POST['contact'];
+$inserted = false;
+if (isset($_POST['save'])) {
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $contact = $_POST['contact'];
 
     $sql = "INSERT INTO `student` (`name`, `address`, `contact`) VALUES ('$name', '$address', '$contact')";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
-    $inserted=true;
-
+    $inserted = true;
 }
 
 ?>
@@ -21,24 +20,22 @@ if(isset($_POST['save'])){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Add Student</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
     <?php include "partials/_header.php"; ?>
 
-    <?php
-    
-    if($inserted){
-        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> Student was added successfully!
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>';
-    }
-    ?>
+    <!-- Alert Message  -->
+    <div class="position-absolute w-100">
+        <div class="alert alert-success alert-dismissible fade show d-none" role="alert" id="added-alert">
+            <strong>Success!</strong> Student was added successfully!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
 
-    <div class="container my-5">
+    <div class="container my-5 py-3">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
@@ -66,7 +63,14 @@ if(isset($_POST['save'])){
     <script>
         document.getElementById('addStudent').classList.add('active');
     </script>
-    
+
+    <?php
+    if ($inserted) {
+        echo '<script src="./javascript/addStudentAlert.js"></script>';
+    }
+    ?>
+
+
 </body>
 
 </html>
