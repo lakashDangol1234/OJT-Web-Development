@@ -39,15 +39,15 @@ if (isset($_POST['save'])) {
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="mb-3">
                 <label for="address" class="form-label">Address</label>
-                <input type="text" class="form-control" id="address" name="address">
+                <input type="text" class="form-control" id="address" name="address" required>
             </div>
             <div class="mb-3">
                 <label for="contact" class="form-label">Contact</label>
-                <input type="text" class="form-control" id="contact" name="contact">
+                <input type="text" class="form-control" id="contact" name="contact" required>
             </div>
             <button type="submit" class="btn btn-primary" name="save">Add Student</button>
         </form>

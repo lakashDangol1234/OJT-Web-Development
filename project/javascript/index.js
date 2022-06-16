@@ -66,8 +66,8 @@ Array.from(deleteButtons).forEach(deleteButton => {
     deleteButton.addEventListener('click', (event) => {
         // Note: Modal gets Opened after deleteButton is clicked
 
-        // Trying to grab the sid for sending throught POST request:
-        let studentRecord = event.target.parentElement.parentElement; // <tr> tag of Student on which edit button is clicked
+        // Trying to grab the sid for sending through POST request:
+        let studentRecord = event.target.parentElement.parentElement; // <tr> tag of Student on which delete button is clicked
 
         let studentId = studentRecord.getElementsByClassName('student-info')[0];
         deleteSid.value = studentId.innerText; // hidden input

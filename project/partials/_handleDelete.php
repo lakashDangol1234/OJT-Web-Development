@@ -13,3 +13,4 @@ $stmt->execute();
 
 header('location:http://localhost/lakashojt/project/index.php?delete=success');
 }
+?>

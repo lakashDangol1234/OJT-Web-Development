@@ -30,15 +30,15 @@ $showAlert = false;
                         <input type="hidden" name="editSid" id="editSid">
                         <div class="mb-3">
                             <label for="editName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="editName" name="editName">
+                            <input type="text" class="form-control" id="editName" name="editName" required>
                         </div>
                         <div class="mb-3">
                             <label for="editAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="editAddress" name="editAddress">
+                            <input type="text" class="form-control" id="editAddress" name="editAddress" required>
                         </div>
                         <div class="mb-3">
                             <label for="editContact" class="form-label">Contact</label>
-                            <input type="text" class="form-control" id="editContact" name="editContact">
+                            <input type="text" class="form-control" id="editContact" name="editContact" required>
                         </div>
                     </div>
                     <div class="modal-footer justify-content-between">
@@ -97,7 +97,7 @@ $showAlert = false;
     </div>
 
 
-    <div class="container my-5 py-3">
+    <div class="container-fluid container-md my-5 py-3">
         <h2 class="mb-3">Students</h2>
         <table class="table table-striped">
             <thead>
