@@ -25,7 +25,13 @@ if (isset($_POST['save'])) {
 </head>
 
 <body>
-    <?php include "partials/_header.php"; ?>
+    <?php
+    if(isset($_GET['editMethod2']) && $_GET['editMethod2']=="true"){
+        include "partials/_header_forEditMethod2.php";
+    } else{
+        include "partials/_header.php";
+    }
+     ?>
 
     <!-- Alert Message  -->
     <div class="position-absolute w-100">
