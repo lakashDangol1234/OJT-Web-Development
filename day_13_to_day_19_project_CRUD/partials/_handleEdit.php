@@ -18,7 +18,7 @@ $stmt->bindparam(':id',$sid);
 $stmt->execute();
 
 
-header('location:http://localhost/lakashojt/project/index.php?edit=success');
+header('location:http://localhost/lakashojt/day_13_to_day_19_project_CRUD/index.php?edit=success');
 }
 
 ?>

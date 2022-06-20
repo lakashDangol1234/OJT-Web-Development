@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update'])) {
     $stmt->execute();
 
 
-    header('location:http://localhost/lakashojt/project/index_editMethod2.php?edit=success');
+    header('location:http://localhost/lakashojt/day_13_to_day_19_project_CRUD/index_editMethod2.php?edit=success');
 }
 
 ?>
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update'])) {
 
     <div class="container-fluid container-md my-5 py-3">
 
-        <form id="editStudentForm" action="/lakashojt/project/partials/_handleEdit_method2.php?editSid=<?php echo $sid ?>" method="POST">
+        <form id="editStudentForm" action="/lakashojt/day_13_to_day_19_project_CRUD/partials/_handleEdit_method2.php?editSid=<?php echo $sid ?>" method="POST">
             <div class="modal-body">
                 <div class="mb-3">
                     <label for="editName" class="form-label">Name</label>

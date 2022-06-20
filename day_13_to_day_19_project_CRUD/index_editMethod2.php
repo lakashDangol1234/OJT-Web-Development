@@ -25,7 +25,7 @@ $showAlert = false;
                     <h5 class="modal-title" id="deleteStudentModalLabel">Delete Student</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form id="deleteStudentForm" action="/lakashojt/project/partials/_handleDelete.php" method="POST">
+                <form id="deleteStudentForm" action="/lakashojt/day_13_to_day_19_project_CRUD/partials/_handleDelete.php?editMethod2=true" method="POST">
                     <div class="modal-body">
                         <input type="hidden" name="deleteSid" id="deleteSid">
                         <h4>Are you sure ?</h4>
@@ -94,7 +94,7 @@ $showAlert = false;
                         <td class="student-info">' . $student->address . '</td>
                         <td class="student-info">' . $student->contact . '</td>
                         <td>
-                        <a class="btn btn-primary text-decoration-none text-light" href="/lakashojt/project/partials/_handleEdit_method2.php?id='. $student->sid . '">Edit</a>
+                        <a class="btn btn-primary text-decoration-none text-light" href="/lakashojt/day_13_to_day_19_project_CRUD/partials/_handleEdit_method2.php?id='. $student->sid . '">Edit</a>
 
                         <button class="btn btn-danger delete-btn" id="delete-' . $student->sid . '" data-bs-toggle="modal"
                         data-bs-target="#deleteStudentModal">Delete</button>
