@@ -13,7 +13,7 @@
     <?php include "partials/_header.php" ?>
     <div class="container-fluid container-md my-5 py-3">
         <h1>Login Page</h1>
-        <form>
+        <form method="POST" action="/lakashojt/day_20_to_day_un_loginSystem/partials/_handleLogin.php">
             <div class="mb-3">
                 <label for="username" class="form-label">User Name</label>
                 <input type="text" class="form-control" id="Username" placeholder="username" name="username" required/>
