@@ -1,3 +1,4 @@
+<!-- Navbar Starts Here  -->
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="/lakashojt/day_20_to_day_un_loginSystem/index.php">OJT Project</a>
@@ -13,10 +14,16 @@
                     <a class="nav-link" id="about" href="#">About</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex me-5" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-warning" type="submit">Search</button>
             </form>
+            <div class="d-flex justify-content-between">
+                <a href="/lakashojt/day_20_to_day_un_loginSystem/signupPage.php" class="btn btn-danger mx-3">Sign Up</a>
+                <a href="/lakashojt/day_20_to_day_un_loginSystem/loginPage.php" class="btn btn-danger">Login</a>
+            </div>
         </div>
     </div>
+    <!-- NavBar ends Here  -->
 </nav>
+

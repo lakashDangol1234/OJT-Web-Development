@@ -1,0 +1,1 @@
+learned to connect database from php code

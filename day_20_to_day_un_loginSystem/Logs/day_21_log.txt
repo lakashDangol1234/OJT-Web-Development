@@ -1,0 +1,1 @@
+Fetch the username and password value from form after login submission

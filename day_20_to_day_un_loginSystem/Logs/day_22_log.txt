@@ -1,0 +1,1 @@
+Handle the login page and check the user from the database whether it is present or not
