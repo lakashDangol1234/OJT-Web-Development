@@ -1,6 +1,12 @@
 <?php
+session_start();
+if (empty($_SESSION['username'])) {
+    header("location:loginPage.php");
+}
+
+
 $showLoginAlert = false;
-$showSignUpAlert=false;
+$showSignUpAlert = false;
 if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['login']) && $_GET['login'] == "success") {
     $showLoginAlert = true;
 }
@@ -32,9 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['login']) && $_GET['logi
             <strong>Success!</strong>
             <?php
             if ($showLoginAlert) {
-                echo "You are successfully logged in";
+                echo "You are successfully logged in as " . $_SESSION['username'];
             } else if ($showSignUpAlert) {
-                echo "You are successfully signed up";
+                echo "You are successfully signed up as " . $_SESSION['username'];
             }
 
             ?>
@@ -239,7 +245,6 @@ if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['login']) && $_GET['logi
             document.getElementById("login-signup-alert").classList.add("d-none");
         }, 5000);
     </script>';
-
     }
     ?>
 

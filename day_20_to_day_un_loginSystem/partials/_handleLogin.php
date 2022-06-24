@@ -18,7 +18,9 @@ if(isset($_POST['login'])){
     else{
         // User is found and checking password if it matchs or not
         if($result->password==$pwd){
-            header("location:http://localhost/lakashojt/day_20_to_day_un_loginSystem/index.php?login=success");
+            session_start();
+            $_SESSION['username'] = $result->username;
+            header("location:/lakashojt/day_20_to_day_un_loginSystem/index.php?login=success");
         }
         else{
             // If password does not match

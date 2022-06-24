@@ -19,11 +19,17 @@
                 <button class="btn btn-outline-warning" type="submit">Search</button>
             </form>
             <div class="d-flex justify-content-between">
-                <a href="/lakashojt/day_20_to_day_un_loginSystem/signupPage.php" class="btn btn-danger mx-3">Sign Up</a>
-                <a href="/lakashojt/day_20_to_day_un_loginSystem/loginPage.php" class="btn btn-danger">Login</a>
+                <?php
+                if (isset($_SESSION['username'])) {
+                    echo '<a href="/lakashojt/day_20_to_day_un_loginSystem/partials/_handleLogout.php" class="btn btn-danger">Logout</a>';
+                } else {
+                    echo '<a href="/lakashojt/day_20_to_day_un_loginSystem/signupPage.php" class="btn btn-danger mx-3">Sign Up</a>
+                    <a href="/lakashojt/day_20_to_day_un_loginSystem/loginPage.php" class="btn btn-danger">Login</a>';
+                }
+                ?>
+
             </div>
         </div>
     </div>
     <!-- NavBar ends Here  -->
 </nav>
-

@@ -1,4 +1,8 @@
 <?php
+/*
+Table Look : school.student
+| sid(PK) | name | address | contact |
+*/
 define("HOST", "localhost");
 define("DB_NAME", "school");
 define("DB_USER", "root");

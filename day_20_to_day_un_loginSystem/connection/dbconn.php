@@ -1,4 +1,8 @@
 <?php
+/*
+Table Look: school.users
+| uid(PK) | username | email | password |
+*/
 define("HOST", "localhost");
 define("DB_NAME", "school");
 define("DB_USER", "root");
