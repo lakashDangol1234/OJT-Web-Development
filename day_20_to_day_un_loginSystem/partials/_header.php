@@ -21,12 +21,21 @@
             <div class="d-flex justify-content-between">
                 <?php
                 if (isset($_SESSION['username'])) {
-                    echo '<a href="/lakashojt/day_20_to_day_un_loginSystem/partials/_handleLogout.php" class="btn btn-danger">Logout</a>';
+                    echo '<div class="d-flex justify-content-around align-items-center bg-primary me-3 px-2" style="border-radius:5px;">
+                        <img src="./images/default_userImage.png" alt="userImage" class="img-fluid" width="40">
+                        <p class="text-light m-0 ms-2">'. $_SESSION['username'].'</p>
+                    </div>
+                
+                    <a href="/lakashojt/day_20_to_day_un_loginSystem/partials/_handleLogout.php" class="btn btn-danger">Logout</a>
+                    
+               
+                    ';
                 } else {
                     echo '<a href="/lakashojt/day_20_to_day_un_loginSystem/signupPage.php" class="btn btn-danger mx-3">Sign Up</a>
                     <a href="/lakashojt/day_20_to_day_un_loginSystem/loginPage.php" class="btn btn-danger">Login</a>';
                 }
                 ?>
+
 
             </div>
         </div>

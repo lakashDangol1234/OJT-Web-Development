@@ -42,20 +42,25 @@ if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['login']) && $_GET['logi
 
     <div class="container-fluid container-md my-5 py-3">
         <h1>Login Page</h1>
-        <form method="POST" action="/lakashojt/day_20_to_day_un_loginSystem/partials/_handleLogin.php">
+        <form method="POST" action="/lakashojt/day_20_to_day_un_loginSystem/partials/_handleLogin.php" class="my-4">
             <div class="mb-3">
-                <label for="username" class="form-label">User Name</label>
-                <input type="text" class="form-control" id="Username" placeholder="username" name="username" required />
+                <label for="email_username" class="form-label">Username or email address</label>
+                <input type="text" class="form-control" id="email_username" placeholder="Username or Email" name="email_username" required />
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="Password" placeholder="password" name="password" required />
+                <input type="password" class="form-control" id="Password" placeholder="password" name="password" minlength="5" required />
             </div>
             <div class="d-flex justify-content-between">
-                <button type="submit" name="login" class="btn btn-primary">Submit</button>
+                <button type="submit" name="login" class="btn btn-primary">Log In</button>
                 <a href="#">Forget Password?</a>
             </div>
         </form>
+
+
+        <div class="newUser text-center py-3 border border-1 rounded">
+            <p class="m-auto">New to Page? <a href="/lakashojt/day_20_to_day_un_loginSystem/signupPage.php" class="text-decoration-none">Create an account</a></p>
+        </div>
     </div>
 
 

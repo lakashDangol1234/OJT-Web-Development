@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (empty($_SESSION['username'])) {
-    header("location:loginPage.php");
+    header("location:signupPage.php");
 }
 
 
@@ -9,6 +9,9 @@ $showLoginAlert = false;
 $showSignUpAlert = false;
 if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['login']) && $_GET['login'] == "success") {
     $showLoginAlert = true;
+}
+if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['signup']) && $_GET['signup'] == "success") {
+    $showSignUpAlert = true;
 }
 ?>
 <!DOCTYPE html>
