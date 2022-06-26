@@ -1,10 +1,12 @@
 <?php
 include "../connection/dbconn.php";
+include "../admin/adminPassword.php";
 if (isset($_POST['signup'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $contact = $_POST['contact'];
     $pwd = $_POST['password'];
+    $adminPassword=$_POST['admin_password']; // adminPassword is "" when not provided
 
 
     // Validation
@@ -34,6 +36,7 @@ if (isset($_POST['signup'])) {
             $stmt->execute();
             session_start();
             $_SESSION['username'] = $username;
+            if($adminPassword===$admin_password){$_SESSION['admin']=true;}
             header("location:/lakashojt/day_20_to_day_un_loginSystem/index.php?signup=success");
         }
     } else {

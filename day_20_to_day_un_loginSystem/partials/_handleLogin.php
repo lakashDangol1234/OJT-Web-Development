@@ -1,8 +1,10 @@
 <?php
+include "../admin/adminPassword.php";
 include "../connection/dbconn.php";
 if (isset($_POST['login'])) {
     $usernameOrEmail = $_POST['email_username'];
     $pwd = $_POST['password'];
+    $adminPassword=$_POST['admin_password']; // adminPassword is "" when not provided
 
 
     // Validation
@@ -23,10 +25,11 @@ if (isset($_POST['login'])) {
         if (empty($result)) {
             header("location:http://localhost/lakashojt/day_20_to_day_un_loginSystem/loginPage.php?login=error");
         } else {
-            // User is found and checking password if it matchs or not
+            // User is found and checking password if it matches or not
             if ($result->password == $pwd) {
                 session_start();
                 $_SESSION['username'] = $result->username;
+                if($adminPassword===$admin_password){$_SESSION['admin']=true;}
                 header("location:/lakashojt/day_20_to_day_un_loginSystem/index.php?login=success");
             } else {
                 // If password does not match
@@ -38,3 +41,5 @@ if (isset($_POST['login'])) {
         header("location:http://localhost/lakashojt/day_20_to_day_un_loginSystem/loginPage.php?login=error");
     }
 }
+
+?>

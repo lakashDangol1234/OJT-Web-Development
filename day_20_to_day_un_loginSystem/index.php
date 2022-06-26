@@ -1,18 +1,24 @@
 <?php
 session_start();
 if (empty($_SESSION['username'])) {
-    header("location:signupPage.php");
+    header("location:loginPage.php");
 }
 
 
 $showLoginAlert = false;
 $showSignUpAlert = false;
+$showAdminAlert = false;
+
 if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['login']) && $_GET['login'] == "success") {
     $showLoginAlert = true;
 }
 if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['signup']) && $_GET['signup'] == "success") {
     $showSignUpAlert = true;
 }
+if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['permission']) && $_GET['permission'] == "denied") {
+    $showAdminAlert = true;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['signup']) && $_GET['sig
     <!-- NavBar -->
     <?php include "partials/_header.php" ?>
 
+
+    <!-- Success message  -->
     <div class="position-absolute w-100" style="z-index:3;">
         <div class="alert alert-success alert-dismissible fade show d-none" role="alert" id="login-signup-alert">
             <strong>Success!</strong>
@@ -45,7 +53,19 @@ if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['signup']) && $_GET['sig
             } else if ($showSignUpAlert) {
                 echo "You are successfully signed up as " . $_SESSION['username'];
             }
+            ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
 
+    <!-- Error Message  -->
+    <div class="position-absolute w-100" style="z-index:3;">
+        <div class="alert alert-danger alert-dismissible fade show d-none" role="alert" id="permission-denied-alert">
+            <strong>Success!</strong>
+            <?php
+            if ($showAdminAlert) {
+                echo "Please login as Admin to use these features!";
+            }
             ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
@@ -246,6 +266,14 @@ if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['signup']) && $_GET['sig
         document.getElementById("login-signup-alert").classList.remove("d-none");
         setTimeout(() => {
             document.getElementById("login-signup-alert").classList.add("d-none");
+        }, 5000);
+    </script>';
+    }
+    if ($showAdminAlert) {
+        echo '<script>
+        document.getElementById("permission-denied-alert").classList.remove("d-none");
+        setTimeout(() => {
+            document.getElementById("permission-denied-alert").classList.add("d-none");
         }, 5000);
     </script>';
     }

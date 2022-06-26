@@ -1,0 +1,3 @@
+Added privileges
+like admin can only see and add student
+other cannot
