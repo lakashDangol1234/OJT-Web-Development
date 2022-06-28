@@ -31,11 +31,12 @@ if (isset($_POST['signup'])) {
             header("location:http://localhost/lakashojt/day_20_to_day_un_loginSystem/signupPage.php?userExists=true");
         } else {
             // If user doesnot exists then, sign up is successfull
-            $sql = "INSERT INTO `users` (`username`, `email`, `contact`,`password`) VALUES ('$username', '$email', '$contact','$pwd')";
+            $sql = "INSERT INTO `users` (`username`, `email`, `contact`,`password`,`navBarTheme`) VALUES ('$username', '$email', '$contact','$pwd','dark')";
             $stmt = $conn->prepare($sql);
             $stmt->execute();
             session_start();
             $_SESSION['username'] = $username;
+            $_SESSION['navbarTheme']='dark';
             if($adminPassword===$admin_password){$_SESSION['admin']=true;}
             header("location:/lakashojt/day_20_to_day_un_loginSystem/index.php?signup=success");
         }

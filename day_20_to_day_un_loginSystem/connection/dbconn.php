@@ -1,7 +1,7 @@
 <?php
 /*
 Table Look: school.users
-| uid(PK) | username | email | contact | password |
+| uid(PK) | username | email | contact | password | navBarTheme
 */
 define("HOST", "localhost");
 define("DB_NAME", "school");

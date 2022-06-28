@@ -29,6 +29,7 @@ if (isset($_POST['login'])) {
             if ($result->password == $pwd) {
                 session_start();
                 $_SESSION['username'] = $result->username;
+                $_SESSION['navbarTheme']=$result->navBarTheme;
                 if($adminPassword===$admin_password){$_SESSION['admin']=true;}
                 header("location:/lakashojt/day_20_to_day_un_loginSystem/index.php?login=success");
             } else {
