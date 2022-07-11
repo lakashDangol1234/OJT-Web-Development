@@ -4,8 +4,8 @@ Table Look: school.users
 | uid(PK) | username | email | contact | password | navBarTheme
 */
 /*
-Table Look: school.student
-| sid(PK) | name | address | contact
+Table Look : school.studentWithClass
+| sid(PK) | name | address | contact | class | section
 */
 define("HOST", "localhost");
 define("DB_NAME", "school");
