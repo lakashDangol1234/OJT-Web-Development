@@ -53,7 +53,7 @@ navbarThemeForm.addEventListener('submit', (e) => {
     };
 
 
-    fetch('/lakashojt/day_29/partials/_handleNavbarTheme.php', {
+    fetch('/lakashojt/day_29_to_day_un_oop/partials/_handleNavbarTheme.php', {
         method: 'POST',
         mode: "same-origin",
         credentials: "same-origin",

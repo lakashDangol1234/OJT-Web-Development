@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['username'])) {
-    header("location:/lakashojt/day_29/index.php");
+    header("location:/lakashojt/day_29_to_day_un_oop/index.php");
 }
 ?>
 
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['userExists']) && $_GET[
         </div>
 
 
-        <form method="POST" action="/lakashojt/day_29/partials/_handleSignup.php" class="my-4">
+        <form method="POST" action="/lakashojt/day_29_to_day_un_oop/partials/_handleSignup.php" class="my-4">
             <div class="mb-3 d-none" id="admin_password_formBox">
                 <label for="admin_password" class="form-label">Admin Password</label>
                 <input type="password" class="form-control" id="admin_password" placeholder="Admin Password" name="admin_password"/>
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['userExists']) && $_GET[
             </div>
             <div class="d-flex justify-content-between">
                 <button type="submit" name="signup" class="btn btn-primary">Sign Up</button>
-                <a href="/lakashojt/day_29/loginPage.php">Already had an account?</a>
+                <a href="/lakashojt/day_29_to_day_un_oop/loginPage.php">Already had an account?</a>
             </div>
         </form>
 

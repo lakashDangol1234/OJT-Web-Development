@@ -28,7 +28,7 @@ if (isset($_POST['signup'])) {
 
         // If user exists
         if (!empty($result)) {
-            header("location:http://localhost/lakashojt/day_29/signupPage.php?userExists=true");
+            header("location:http://localhost/lakashojt/day_29_to_day_un_oop/signupPage.php?userExists=true");
         } else {
             // If user doesnot exists then, sign up is successfull
             $sql = "INSERT INTO `users` (`username`, `email`, `contact`,`password`,`navBarTheme`) VALUES ('$username', '$email', '$contact','$pwd','dark')";
@@ -38,11 +38,11 @@ if (isset($_POST['signup'])) {
             $_SESSION['username'] = $username;
             $_SESSION['navbarTheme']='dark';
             if($adminPassword===$admin_password){$_SESSION['admin']=true;}
-            header("location:/lakashojt/day_29/index.php?signup=success");
+            header("location:/lakashojt/day_29_to_day_un_oop/index.php?signup=success");
         }
     } else {
         //Validation fails 
-        header("location:http://localhost/lakashojt/day_29/signupPage.php?invalidCredentials=true");
+        header("location:http://localhost/lakashojt/day_29_to_day_un_oop/signupPage.php?invalidCredentials=true");
     }
 }
 ?>

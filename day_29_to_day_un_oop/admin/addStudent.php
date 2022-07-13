@@ -1,6 +1,6 @@
 <?php
-include "../partials/_studentUtils.php";
 include "../connection/dbconn.php";
+include "../partials/_studentUtils.php";
 session_start();
 if (empty($_SESSION['username']) && empty($_SESSION['admin'])) {
     header("location:loginPage.php");
@@ -17,10 +17,7 @@ if (isset($_POST['save'])) {
     $section = $_POST['section'];
     $gender=$_POST['gender'];
 
-    $sql = "INSERT INTO `studentWithClass` (`name`, `address`, `contact`,`class`,`section`,`gender`) VALUES ('$name', '$address', '$contact','$clas','$section','$gender')";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    
+    addStudent($name,$address,$contact,$clas,$section,$gender);
     $inserted = true;
 }
 

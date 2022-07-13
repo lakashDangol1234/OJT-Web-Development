@@ -47,12 +47,20 @@ Array.from(editButtons).forEach(editButton => {
         let studentContact = studentInformation[3];
         let studentClass= studentInformation[4];
         let studentSection= studentInformation[5];
+        let studentGender = studentInformation[6];
+
 
         // Putting values in field in modal 
         editSid.value = studentId.innerText; // hidden input
         nameField.value = studentName.innerText;
         addressField.value = studentAddress.innerText;
         contactField.value = studentContact.innerText;
+        
+
+        let studentCurrentGenderRadioElement = document.getElementById(studentGender.innerText);
+        // Checking the radio button of current gender
+        studentCurrentGenderRadioElement.checked=true;
+        console.log(studentCurrentGenderRadioElement);
 
         // Removing the selected attribute from the select option of class and section
         classField.querySelector('option[selected]').removeAttribute('selected');

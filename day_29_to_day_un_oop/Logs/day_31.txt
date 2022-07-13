@@ -1,0 +1,1 @@
+Added function to our code and learned about array

@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
 
         // If user not found
         if (empty($result)) {
-            header("location:http://localhost/lakashojt/day_29/loginPage.php?login=error");
+            header("location:http://localhost/lakashojt/day_29_to_day_un_oop/loginPage.php?login=error");
         } else {
             // User is found and checking password if it matches or not
             if ($result->password == $pwd) {
@@ -31,15 +31,15 @@ if (isset($_POST['login'])) {
                 $_SESSION['username'] = $result->username;
                 $_SESSION['navbarTheme']=$result->navBarTheme;
                 if($adminPassword===$admin_password){$_SESSION['admin']=true;}
-                header("location:/lakashojt/day_29/index.php?login=success");
+                header("location:/lakashojt/day_29_to_day_un_oop/index.php?login=success");
             } else {
                 // If password does not match
-                header("location:http://localhost/lakashojt/day_29/loginPage.php?login=error");
+                header("location:http://localhost/lakashojt/day_29_to_day_un_oop/loginPage.php?login=error");
             }
         }
     }else{
         // Validation fails
-        header("location:http://localhost/lakashojt/day_29/loginPage.php?login=error");
+        header("location:http://localhost/lakashojt/day_29_to_day_un_oop/loginPage.php?login=error");
     }
 }
 

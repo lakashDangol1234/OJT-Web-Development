@@ -32,7 +32,7 @@ $showAlert = false;
                     <h5 class="modal-title" id="editStudentModalLabel">Edit Student</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form id="editStudentForm" action="/lakashojt/day_29/partials/_handleEdit.php" method="POST">
+                <form id="editStudentForm" action="/lakashojt/day_29_to_day_un_oop/partials/_handleEdit.php" method="POST">
                     <div class="modal-body">
                         <input type="hidden" name="editSid" id="editSid">
                         <div class="mb-3">
@@ -77,7 +77,28 @@ $showAlert = false;
                                 </div>
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <p class="form-label">Gender</p>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="editGender" id="male" value="male"/>
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="editGender" id="female" value="female" />
+                                    <label class="form-check-label" for="female">Female</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="editGender" id="others" value="others" />
+                                    <label class="form-check-label" for="others">Others</label>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
+
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Save changes</button>
@@ -96,7 +117,7 @@ $showAlert = false;
                     <h5 class="modal-title" id="deleteStudentModalLabel">Delete Student</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form id="deleteStudentForm" action="/lakashojt/day_29/partials/_handleDelete.php" method="POST">
+                <form id="deleteStudentForm" action="/lakashojt/day_29_to_day_un_oop/partials/_handleDelete.php" method="POST">
                     <div class="modal-body">
                         <input type="hidden" name="deleteSid" id="deleteSid">
                         <h4>Are you sure ?</h4>
@@ -145,6 +166,7 @@ $showAlert = false;
                     <th scope="col">Contact</th>
                     <th scope="col">Class</th>
                     <th scope="col">Section</th>
+                    <th scope="col">Gender</th>
                 </tr>
 
             </thead>
@@ -168,6 +190,7 @@ $showAlert = false;
                         <td class="student-info">' . $student->contact . '</td>
                         <td class="student-info">' . $student->class . '</td>
                         <td class="student-info">' . $student->section . '</td>
+                        <td class="student-info">' . $student->gender . '</td>
                         <td>
                         <button class="btn btn-primary edit-btn" id="edit-' . $student->sid . '" data-bs-toggle="modal" data-bs-target="#editStudentModal">Edit</button>
 

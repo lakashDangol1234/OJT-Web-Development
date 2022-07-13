@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['username'])) {
-    header("location:/lakashojt/day_29/index.php");
+    header("location:/lakashojt/day_29_to_day_un_oop/index.php");
 }
 ?>
 
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['login']) && $_GET['logi
             <h1>Login Page</h1>
             <button id="loginAsAdmin_guest" class="btn btn-primary" style="cursor:pointer;">Login as Admin?</button>
         </div>
-        <form method="POST" action="/lakashojt/day_29/partials/_handleLogin.php" class="my-4">
+        <form method="POST" action="/lakashojt/day_29_to_day_un_oop/partials/_handleLogin.php" class="my-4">
             <div class="mb-3 d-none" id="admin_password_formBox">
                 <label for="admin_password" class="form-label">Admin Password</label>
                 <input type="password" class="form-control" id="admin_password" placeholder="Admin Password" name="admin_password" />
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['login']) && $_GET['logi
 
 
         <div class="newUser text-center py-3 border border-1 rounded">
-            <p class="m-auto">New to Page? <a href="/lakashojt/day_29/signupPage.php" class="text-decoration-none">Create an account</a></p>
+            <p class="m-auto">New to Page? <a href="/lakashojt/day_29_to_day_un_oop/signupPage.php" class="text-decoration-none">Create an account</a></p>
         </div>
     </div>
 

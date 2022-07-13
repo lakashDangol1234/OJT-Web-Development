@@ -10,6 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['deleteSid'])) {
 
     $stmt->execute();
 
-    header('location:http://localhost/lakashojt/day_29/admin/showStudent.php?delete=success');
+    header('location:http://localhost/lakashojt/day_29_to_day_un_oop/admin/showStudent.php?delete=success');
 }
 
