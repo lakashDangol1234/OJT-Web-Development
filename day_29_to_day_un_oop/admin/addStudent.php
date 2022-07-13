@@ -1,4 +1,5 @@
 <?php
+include "../partials/_studentUtils.php";
 include "../connection/dbconn.php";
 session_start();
 if (empty($_SESSION['username']) && empty($_SESSION['admin'])) {
@@ -14,10 +15,12 @@ if (isset($_POST['save'])) {
     $contact = $_POST['contact'];
     $clas = $_POST['class'];
     $section = $_POST['section'];
+    $gender=$_POST['gender'];
 
-    $sql = "INSERT INTO `studentWithClass` (`name`, `address`, `contact`,`class`,`section`) VALUES ('$name', '$address', '$contact','$clas','$section')";
+    $sql = "INSERT INTO `studentWithClass` (`name`, `address`, `contact`,`class`,`section`,`gender`) VALUES ('$name', '$address', '$contact','$clas','$section','$gender')";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
+    
     $inserted = true;
 }
 
@@ -94,6 +97,26 @@ if (isset($_POST['save'])) {
                     </div>
                 </div>
             </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <p class="form-label">Gender</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked/>
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female" />
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="others" value="others" />
+                        <label class="form-check-label" for="others">Others</label>
+                    </div>
+                </div>
+
+            </div>
+
 
             <button type="submit" class="btn btn-primary" name="save">Add Student</button>
         </form>
