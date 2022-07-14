@@ -5,7 +5,7 @@ Table Look: school.users
 */
 /*
 Table Look : school.studentWithClass
-| sid(PK) | name | address | contact | class | section
+| sid(PK) | name | address | contact | class | section | gender
 */
 define("HOST", "localhost");
 define("DB_NAME", "school");
